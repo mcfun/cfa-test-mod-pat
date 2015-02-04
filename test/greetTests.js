@@ -20,7 +20,7 @@ describe('assure proper output of makeGreetings', function() {
 	it('should send out mutiple greetings', function() {
 		expect(makeGreetings(['Ian', 'Richard'])).to.eql(['Hello Ian!', 'Hello Richard!']);
 	});
-	it('should handle non-names an notify user', function(){
+	it('should handle non-names and notify user', function(){
 		expect(makeGreetings(['Bob', 4, 'Ron'])).to.eql(['Hello Bob!', 'Argument 2 is not a name.', 'Hello Ron!']);
 	});
 	it('should handle no names', function() {
