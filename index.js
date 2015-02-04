@@ -5,7 +5,7 @@ var args = process.argv;
 var peepsToGreet = [];
 
 for ( var i = 2; i < args.length; i++) {
-	peepsToGreet.push(args[i])
+	peepsToGreet.push(args[i]);
 }
 
 greet.logGreetings(greet.makeGreetings(peepsToGreet));
