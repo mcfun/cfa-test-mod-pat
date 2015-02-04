@@ -1,9 +1,16 @@
 'use strict';
 
 var greet = require('./lib/greet.js');
+var args = process.argv;
+var peepsToGreet = [];
 
-console.log(greet.hello('nancy'));
+for ( var i = 2; i < args.length; i++) {
+	peepsToGreet.push(args[i]);
+}
 
-process.argv.forEach(function(a) {
-	console.log(a);
-});
+greet.logGreetings(greet.makeGreetings(peepsToGreet));
+
+
+//process.argv.forEach(function(a) {
+//	console.log(a);
+//});
